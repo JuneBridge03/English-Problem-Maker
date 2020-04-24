@@ -46,29 +46,34 @@ public class App {
                         System.out.println("[System] Detected! Code : " + fnames[i]);
                         switch (fnames[i]) {
 
-                        case "빈칸채우기": {
-                            BlankMaker.startFile(fname, Integer.parseInt(fnames[++i]));
-                            break;
-                        }
+                            case "빈칸채우기": {
+                                BlankMaker.startFile(fname, Integer.parseInt(fnames[++i]));
+                                break;
+                            }
 
-                        case "영작하기": {
-                            EmptyMaker.startFile(fname);
-                            break;
-                        }
+                            case "영작하기": {
+                                EmptyMaker.startFile(fname);
+                                break;
+                            }
 
-                        case "배열하기": {
-                            MixwordMaker.startFile(fname);
-                            break;
-                        }
+                            case "배열하기": {
+                                MixwordMaker.startFile(fname);
+                                break;
+                            }
 
-                        case "순서배열": {
-                            OrderMaker.startFile(fname, Integer.parseInt(fnames[++i]));
-                            break;
-                        }
+                            case "순서배열": {
+                                OrderMaker.startFile(fname, Integer.parseInt(fnames[++i]));
+                                break;
+                            }
 
-                        default: {
-                            System.out.println("[System] Wrong Code!");
-                        }
+                            case "해석하기": {
+                                EmptyKoreanMaker.startFile(fname);
+                                break;
+                            }
+
+                            default: {
+                                System.out.println("[System] Wrong Code!");
+                            }
 
                         }
                     }
